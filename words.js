@@ -1,12 +1,19 @@
-var words = require("./letters.js");
+var letters = require("./letters.js");
 
-// Word constructor
-function Word() {
+function Words() {
+    
 
 }
+
+// Word constructor
+//function Word() {
+
+//}
 
 //new 'letters' objects
 
-var toString = function() {
+//var toString = function() {
     //returns string of the Word
-}
+//}
+
+module.exports = words;

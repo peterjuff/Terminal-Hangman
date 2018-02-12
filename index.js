@@ -1,3 +1,9 @@
-//randomly selects a word and uses Word const to store it
+var inquirer = require('inquirer');
+var wordsReq = require("./words.js");
+
+
+
+
+
 
 //prompts user for each guess + keeps track of remaining guesses
