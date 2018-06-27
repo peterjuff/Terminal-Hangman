@@ -1,7 +1,7 @@
 var inquirer = require('inquirer');
-var wordsReq = require("./words.js");
+var words = require("./words.js");
 
-var wordBank = ["html", "css", "javascript", "node", "jquery"];
+var wordBank = ["html", "css", "javascript", "node", "jquery", "bootstrap", "react"];
 
 //randomly selects a word and uses Word const to store it
 var randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
