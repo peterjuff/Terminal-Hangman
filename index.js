@@ -1,11 +1,11 @@
 var inquirer = require('inquirer');
 var words = require("./words.js");
+var list = require("./list.js");
 
-var wordBank = ["html", "css", "javascript", "node", "jquery", "bootstrap", "react"];
 
 //randomly selects a word and uses Word const to store it
-var randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-console.log(randWord);
+var randMovie = list[Math.floor(Math.random() * list.length)];
+console.log(randMovie);
 
 
 //prompts user for each guess + keeps track of remaining guesses
