@@ -6,8 +6,10 @@ var list = require("./list.js");
 //randomly selects a word and uses Word const to store it
 var randMovie = list[Math.floor(Math.random() * list.length)];
 console.log(randMovie);
+var guesses = [];
+var guessesLeft = randMovie.length + 5;
 
-
+function ask() {
 //prompts user for each guess + keeps track of remaining guesses
 inquirer.prompt([
     {
@@ -21,5 +23,8 @@ inquirer.prompt([
 ]).then(answers => {
     Word(letters);
     
-});
+    });
+
+}
+ask();
 //randWord = new Letter();
