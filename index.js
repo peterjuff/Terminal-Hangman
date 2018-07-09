@@ -1,4 +1,5 @@
 var inquirer = require('inquirer');
+var chalk = require("chalk");
 var words = require("./words.js");
 var list = require("./list.js");
 
