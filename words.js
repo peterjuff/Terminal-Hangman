@@ -1,7 +1,7 @@
 var letters = require("./letters.js");
 
 // Word constructor
-function Word() {
+function Words() {
     this.letter = [];
     for (var i = 0; i < randWord.length; i++) {
         this.letter.push(randWord[i]);
@@ -24,4 +24,4 @@ function Word() {
     //returns string of the Word
 //}
 
-module.exports = Word;
+module.exports = Words;
