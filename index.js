@@ -5,7 +5,7 @@ var list = require("./list.js");
 
 var randMovie = list[Math.floor(Math.random() * list.length)];
 console.log(randMovie);
-var newWord = new Word(randMovie);
+// var newWord = new Word(randMovie);
 var guessesLeft = randMovie.length + 5;
 var guesses = [];
 
@@ -21,7 +21,7 @@ function ask() {
     ]).then(function(answers) {
         var storage = answers.userGuess;
         //check if letter guessed
-        newWord.checkGuess(storage)
+        new Word(randMovie);
         if (guessesLeft > 0 && guesses.indexOf(storage) === -1) {
             guesses.push(storage);
             guessesLeft--;

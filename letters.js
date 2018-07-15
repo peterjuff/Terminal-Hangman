@@ -4,9 +4,9 @@
 function Letter(letter, character) {
     this.letter = letter;
     this.character = character;
-    this.guess = false;
+    this.guess = null;
     this.charRet = function(userLetter) {
-        if (this.character === userLetter) {
+        if (this.guess === userLetter) {
             this.guess = true;
         } 
             
@@ -17,6 +17,7 @@ function Letter(letter, character) {
             return this.guess;
         } return " - ";
     };
+    console.log(this.guess);
         
     
 };
