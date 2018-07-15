@@ -1,10 +1,11 @@
 var inquirer = require('inquirer');
 var chalk = require("chalk");
-var words = require("./words.js");
+var Word = require("./words.js");
 var list = require("./list.js");
 
 var randMovie = list[Math.floor(Math.random() * list.length)];
 console.log(randMovie);
+var newWord = new Word(randMovie);
 var guessesLeft = randMovie.length + 5;
 var guesses = [];
 
@@ -14,13 +15,13 @@ function ask() {
     inquirer.prompt([
         {
             type: "input",
-            message: "Hello. Guess a letter. Come on, you know you want to.",
-            name: "Letter"
+            message: "Guess a letter. Come on, you know you want to.",
+            name: "userGuess"
         },
     ]).then(function(answers) {
-        var storage = answers.Letter;
+        var storage = answers.userGuess;
         //check if letter guessed
-        newWord.checkGuess(storage); 
+        newWord.checkGuess(storage)
         if (guessesLeft > 0 && guesses.indexOf(storage) === -1) {
             guesses.push(storage);
             guessesLeft--;

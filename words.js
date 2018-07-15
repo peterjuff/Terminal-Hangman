@@ -1,27 +1,31 @@
-var letters = require("./letters.js");
+var Letter = require("./letters.js");
 
 // Word constructor
-function Words() {
+function Word(randMovie) {
+    this.randMovie = randMovie;
     this.letter = [];
-    for (var i = 0; i < randWord.length; i++) {
-        this.letter.push(randWord[i]);
+    for (var i = 0; i < randMovie.length; i++) {
+        this.letter.push(new Letter(this.randMovie[i]));
     }
-    this.retString = function() {
-            this.Letter();
+    this.retString = function(userInput) {
+        var checkUserInput = new Letter(userInput);
+        return checkUserInput.guesses(userInput);
+            
     }
+    this.toString = function() {
+        var output = "";
+        //return string of dashes or letters
+        for (var j = 0; j < this.letter.length; j++) {
+            output += this.letter[j].returnLetter();
+        }
+
+        return output;
+
+    };
 
     
 
 }
-//console.log(Letter.charRet());
-
-//console.log(randWord);
 
 
-
-
-//var toString = function() {
-    //returns string of the Word
-//}
-
-module.exports = Words;
+module.exports = Word;

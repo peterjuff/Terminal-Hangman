@@ -1,7 +1,8 @@
 
 
 //obj const to character guessed or placeholder
-function Letter(character, guess) {
+function Letter(letter, character) {
+    this.letter = letter;
     this.character = character;
     this.guess = false;
     this.charRet = function(userLetter) {
@@ -23,5 +24,3 @@ function Letter(character, guess) {
 module.exports = Letter;
 
 
-
-//};
