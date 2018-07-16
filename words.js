@@ -9,14 +9,14 @@ function Word(randMovie) {
     }
     this.retString = function(userInput) {
         var checkUserInput = new Letter(userInput);
-        return checkUserInput.guesses(userInput);
+        return checkUserInput.charRet(userInput);
             
     }
     this.toString = function() {
         var output = "";
         //return string of dashes or letters
         for (var j = 0; j < this.letter.length; j++) {
-            output += this.letter[j].returnLetter();
+            output += this.letter[j].charCheck();
         }
 
         return output;
