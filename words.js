@@ -18,7 +18,7 @@ function Word(randMovie) {
         for (var j = 0; j < this.letter.length; j++) {
             output += this.letter[j].charCheck();
         }
-
+        console.log(output);
         return output;
 
     };

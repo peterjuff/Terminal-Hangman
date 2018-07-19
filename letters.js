@@ -6,18 +6,18 @@ function Letter(letter, character) {
     this.character = character;
     this.guess = false;
     this.charRet = function(userInput) {
-        if (this.guess == userInput) {
+        if (this.letter === userInput) {
             this.guess = true;
-        } 
+        } else {return " - "}
+        console.log(this.guess); 
             
-};
+    };
     //shows letter if this.guess is true or - if false
     this.charCheck = function() {
         if (this.guess) {
             return this.guess;
         } return " - ";
     };
-    console.log(this.guess);
         
     
 };
