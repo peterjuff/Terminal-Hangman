@@ -8,7 +8,9 @@ var randMovie = list[Math.floor(Math.random() * list.length)];
 console.log(randMovie);
 var guessesLeft = randMovie.length + 5;
 var guesses = [];
+var correctGuesses = [];
 var newWord = new Word(randMovie);
+
 
 //asks user for guesses
 
