@@ -1,26 +1,23 @@
 
 
 //obj const to character guessed or placeholder
-function Letter(letter, character) {
+function Letter(letter) {
     this.letter = letter;
-    this.character = character;
     this.guess = false;
-    this.charRet = function(userInput) {
-        if (this.letter === userInput) {
-            this.guess = true;
-        } else {return " - "}
-        console.log(this.guess); 
+    this.charRet = function() {
+        if (this.guess == false) {
+            return " _ ";
+        } else {return letter}
             
     };
-    //shows letter if this.guess is true or - if false
-    this.charCheck = function() {
-        if (this.guess) {
-            return this.guess;
-        } return " - ";
-    };
+    this.charCheck = function(guesses) {
+        if (guesses == this.letter) { 
+            this.guess = true;
+        } 
         
-    
+    }
 };
+
 
 module.exports = Letter;
 
